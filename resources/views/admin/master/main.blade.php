@@ -20,42 +20,28 @@
     dir="ltr"
     data-theme="theme-default"
     data-assets-path="../assets/"
-    data-template="vertical-menu-template-free"
 >
 @include('admin.partials.header')
 <body>
 
-
-{{--Menu--}}
-@include('admin.partials.menu')
-{{--end Menu--}}
-
-
-
-<div class="layout-page">
-
-    <!--navbar-->
-    @include('admin.partials.navbar')
-    <!--end navbar-->
-
-    <div class="content-wrapper">
-
-        {{--Content wrapper--}}
-        @yield('admin.partials.content')
-        {{--Content wrapper--}}
-
-        {{--footer--}}
-        @include('admin.partials.footer')
-        {{--end footer--}}
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            @include('admin.partials.sidebar')
+            <div class="layout-page">
+                @include('admin.partials.navbar')
+                <div class="content-wrapper">
+                    @yield('content')
+                    @include('admin.partials.footer')
+                    <div class="content-backdrop fade"></div>
+                </div>
+            </div>
+        </div>
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-
-</div>
-
-
 {{--js footer--}}
 @include('admin.partials.js')
 {{--end js footer--}}
+@yield('js')
 
 </body>
 </html>

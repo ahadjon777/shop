@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:admin']], function (){
     Route::get('dashboard',[ \App\Http\Controllers\Admin\AdminController::class, 'admin'])->name('dashboard');
     Route::get('/front', [\App\Http\Controllers\TestController::class, 'front']);
+    Route::get('/setting',[\App\Http\Controllers\Admin\SettingController::class, 'index']);
 });
 
 
