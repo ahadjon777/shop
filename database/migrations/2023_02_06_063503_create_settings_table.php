@@ -19,7 +19,13 @@ return new class extends Migration
             $table->string('site_status');
             $table->string('site_name');
             $table->string('status_mess');
+            $table->text('site_info');
             $table->string('logo');
+            $table->string('name');
+            $table->string('company_name');
+            $table->string('email');
+            $table->bigInteger('phone_number');
+            $table->text('message');
             $table->timestamps();
         });
     }

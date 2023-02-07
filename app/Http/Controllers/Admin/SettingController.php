@@ -15,8 +15,9 @@ class SettingController extends Controller
      */
     public function index()
     {
-//        $settings = Setting::all();
-        return view('admin.layout.setting.index');
+        $set = Setting::where('id', 1)->first();
+
+        return view('admin.layout.setting.index', compact('set'));
     }
 
     /**

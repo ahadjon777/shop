@@ -46,9 +46,9 @@
                         </button>
                     </li>
                 </ul>
+
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="navs-top-home" role="tabpanel">
-
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="card mb-4">
@@ -59,7 +59,7 @@
                                                 class="form-control"
                                                 placeholder="Brand name"
                                                 aria-label="Username"
-                                                aria-describedby="basic-addon11"
+                                                aria-describedby="basic-addon11" value="{{$set->brand_name}}"
                                             />
                                         </div>
 
@@ -76,10 +76,8 @@
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon11">Site Status</span>
                                             <select class="form-select" aria-label="Default select example">
-                                                <option selected>Open</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option selected>Yes</option>
+                                                <option value="1">No</option>
                                             </select>
 {{--                                            <span class="input-group-text" id="basic-addon13">@example.com</span>--}}
                                         </div>

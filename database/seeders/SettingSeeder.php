@@ -20,9 +20,15 @@ class SettingSeeder extends Seeder
         DB::table('settings')->insert([
              'brand_name'=>'AKT AHI',
              'site_status'=>'Yangiliklar olamiga xush kelibsiz',
-            'site_name'=>'akt.uz',
-            'status_mess'=>'lorem ip sum',
-            'logo'=>'jlk/asd/asda'
+             'site_name'=>'akt.uz',
+             'status_mess'=>'lorem ip sum',
+             'logo'=>'jlk',
+             'site_info'=>'lorem ipsum!!!!',
+             'name'=>'Jon',
+             'company_name'=>'Soft developer',
+             'email'=>'mirjalol@gmail.com',
+             'phone_number'=>998943031323,
+             'message'=>'assalomu alekum hammaga',
         ]);
     }
 }
