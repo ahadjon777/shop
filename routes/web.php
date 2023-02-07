@@ -31,7 +31,10 @@ Route::middleware('auth')->group(function () {
 Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:admin']], function (){
     Route::get('dashboard',[ \App\Http\Controllers\Admin\AdminController::class, 'admin'])->name('dashboard');
     Route::get('/front', [\App\Http\Controllers\TestController::class, 'front']);
-    Route::get('/setting',[\App\Http\Controllers\Admin\SettingController::class, 'index']);
+    Route::get('/setting', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('setting');
+    Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile');
+    Route::get('/notification', [App\Http\Controllers\Admin\ProfileController::class, 'notification'])->name('notification');
+    Route::get('/connection', [App\Http\Controllers\Admin\ProfileController::class, 'connection'])->name('connection');
 });
 
 

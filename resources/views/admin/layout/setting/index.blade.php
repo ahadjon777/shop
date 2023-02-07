@@ -1,7 +1,7 @@
 @extends('admin.master.main')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
         <div class="col-xl-12">
 
             <div class="nav-align-top mb-4">
@@ -70,6 +70,7 @@
                                                    placeholder="Site info"
                                                    aria-label="Username"
                                                    aria-describedby="basic-addon11"
+                                                   value="{{$set->site_info}}"
                                             />
                                         </div>
 
@@ -98,6 +99,7 @@
                                                    placeholder="Site name"
                                                    aria-label="Username"
                                                    aria-describedby="basic-addon11"
+                                                   value="{{$set->site_name}}"
                                             />
                                         </div>
 
@@ -108,11 +110,12 @@
                                                    placeholder="Status message"
                                                    aria-label="Username"
                                                    aria-describedby="basic-addon11"
+                                                   value="{{$set->status_mess}}"
                                             />
                                         </div>
 
                                         <div class="input-group">
-                                            <div class="input-group mb-3">
+                                            <div class="inp ut-group mb-3">
                                                 <input type="file" class="form-control" id="inputGroupFile01">
                                             </div>
                                         </div>
@@ -143,6 +146,7 @@
                                                         placeholder="John Doe"
                                                         aria-label="John Doe"
                                                         aria-describedby="basic-icon-default-fullname2"
+                                                        value="{{$set->name}}"
                                                     />
                                                 </div>
                                             </div>
@@ -161,6 +165,7 @@
                                                         placeholder="ACME Inc."
                                                         aria-label="ACME Inc."
                                                         aria-describedby="basic-icon-default-company2"
+                                                        value="{{$set->company_name}}"
                                                     />
                                                 </div>
                                             </div>
@@ -177,6 +182,7 @@
                                                         placeholder="john.doe"
                                                         aria-label="john.doe"
                                                         aria-describedby="basic-icon-default-email2"
+                                                        value="{{$set->email}}"
                                                     />
                                                     <span id="basic-icon-default-email2" class="input-group-text">@example.com</span>
                                                 </div>
@@ -197,6 +203,7 @@
                                                         placeholder="658 799 8941"
                                                         aria-label="658 799 8941"
                                                         aria-describedby="basic-icon-default-phone2"
+                                                        value="{{$set->phone_number}}"
                                                     />
                                                 </div>
                                             </div>
@@ -213,15 +220,12 @@
                                                         class="form-control"
                                                         placeholder="Hi, Do you have a moment to talk Joe?"
                                                         aria-label="Hi, Do you have a moment to talk Joe?"
-                                                        aria-describedby="basic-icon-default-message2"
-                                                    ></textarea>
+                                                        aria-describedby="basic-icon-default-message2"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row justify-content-end">
-                                            <div class="col-sm-10">
-                                                <button type="submit" class="btn btn-primary">Send</button>
-                                            </div>
+
                                         </div>
                                     </form>
                                 </div>

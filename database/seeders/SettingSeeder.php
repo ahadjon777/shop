@@ -28,7 +28,7 @@ class SettingSeeder extends Seeder
              'company_name'=>'Soft developer',
              'email'=>'mirjalol@gmail.com',
              'phone_number'=>998943031323,
-             'message'=>'assalomu alekum hammaga',
+             'message'=>'assalomu alekum hammaga bizni companyga xush kelibsizlar',
         ]);
     }
 }

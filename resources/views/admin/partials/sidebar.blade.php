@@ -330,13 +330,13 @@
         <!-- Tables -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Settings</span></li>
         <li class="menu-item">
-            <a href="#" class="menu-link">
+            <a href="{{route('admin.profile')}}" class="menu-link">
                 <i class='menu-icon bx bx-user-circle' ></i>
                 <div> Profile</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="{{route('admin.')}}" class="menu-link">
+            <a href="{{route('admin.setting')}}" class="menu-link">
                 <i class=' menu-icon bx bx-cog'></i>
                 <div>Setting</div>
             </a>
