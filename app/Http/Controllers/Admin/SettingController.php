@@ -85,26 +85,27 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
+$setting = Setting::where('id', 1)->first();
 
         $image_path = $request->file('logo')->store('image');
 
-//       $setting->update([
-//           'brand_name'=>$request->brand_name,
-//           'site_status'=>$request->site_status,
-//           'site_name'=>$request->site_name,
-//           'status_mess'=>$request->status_mess,
-//           'site_info'=>$request->site_info,
-//           'name'=>$request->name,
-//           'company_name'=>$request->company_name,
-//           'email'=>$request->email,
-//           'phone_name'=>$request->phone_name,
-//           'message'=>$request->message,
-//           'instagram'=>$request->instagram,
-//           'youtube'=>$request->youtube,
-//           'twitter'=>$request->twitter,
-//           'telegram'=>$request->telegram,
-//           'logo'=>$image_path
-//       ]);
+       $setting->update([
+           'brand_name'=>$request->brand_name,
+           'site_status'=>$request->site_status,
+           'site_name'=>$request->site_name,
+           'status_mess'=>$request->status_mess,
+           'site_info'=>$request->site_info,
+           'name'=>$request->name,
+           'company_name'=>$request->company_name,
+           'email'=>$request->email,
+           'phone_number'=>$request->phone_number,
+           'message'=>$request->message,
+           'instagram'=>$request->instagram,
+           'youtube'=>$request->youtube,
+           'twitter'=>$request->twitter,
+           'telegram'=>$request->telegram,
+           'logo'=>$image_path
+       ]);
 //        dd($image_path);
        return redirect(route('admin.setting'));
     }
