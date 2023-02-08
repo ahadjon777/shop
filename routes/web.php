@@ -35,6 +35,7 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:ad
     Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile');
     Route::get('/notification', [App\Http\Controllers\Admin\ProfileController::class, 'notification'])->name('notification');
     Route::get('/connection', [App\Http\Controllers\Admin\ProfileController::class, 'connection'])->name('connection');
+    Route::put('/update', [\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('update');
 });
 
 

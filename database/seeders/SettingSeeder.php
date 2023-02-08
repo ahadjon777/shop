@@ -22,13 +22,17 @@ class SettingSeeder extends Seeder
              'site_status'=>'Yangiliklar olamiga xush kelibsiz',
              'site_name'=>'akt.uz',
              'status_mess'=>'lorem ip sum',
-             'logo'=>'jlk',
+             'logo'=>asset('admin/assets/img/avatars/6.png'),
              'site_info'=>'lorem ipsum!!!!',
              'name'=>'Jon',
              'company_name'=>'Soft developer',
              'email'=>'mirjalol@gmail.com',
              'phone_number'=>998943031323,
              'message'=>'assalomu alekum hammaga bizni companyga xush kelibsizlar',
+            'instagram'=>'ahadjon385',
+            'youtube'=>'Ahadjon_youtobe',
+            'twitter'=>'Ali@34',
+            'telegram'=>'@interested777'
         ]);
     }
 }

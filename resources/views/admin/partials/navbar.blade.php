@@ -80,10 +80,12 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{route('logout')}}">
-                            <i class="bx bx-power-off me-2"></i>
-                            <span class="align-middle">Log Out</span>
-                        </a>
+                        <form action="{{route('logout')}}" method="POST">
+                            @csrf
+                            @method('post')
+                            <button type="submit" class="btn btn-danger dropdown-item"><i class="bx bx-power-off me-2"></i> Logout</button>
+                        </form>
+
                     </li>
                 </ul>
             </li>
