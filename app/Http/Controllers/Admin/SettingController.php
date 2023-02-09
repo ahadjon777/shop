@@ -85,8 +85,7 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-$setting = Setting::where('id', 1)->first();
-
+        $setting = Setting::where('id', 1)->first();
         $image_path = $request->file('logo')->store('image');
 
        $setting->update([
@@ -106,7 +105,6 @@ $setting = Setting::where('id', 1)->first();
            'telegram'=>$request->telegram,
            'logo'=>$image_path
        ]);
-//        dd($image_path);
        return redirect(route('admin.setting'));
     }
 

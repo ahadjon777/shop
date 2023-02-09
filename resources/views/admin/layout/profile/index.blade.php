@@ -41,10 +41,10 @@
                                     accept="image/png, image/jpeg"
                                 />
                             </label>
-                            <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
-                                <i class="bx bx-reset d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Reset</span>
-                            </button>
+{{--                            <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">--}}
+{{--                                <i class="bx bx-reset d-block d-sm-none"></i>--}}
+{{--                                <span class="d-none d-sm-block">Reset</span>--}}
+{{--                            </button>--}}
 
                             <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
                         </div>
@@ -52,7 +52,9 @@
                 </div>
                 <hr class="my-0" />
                 <div class="card-body">
-                    <form id="formAccountSettings" method="POST" onsubmit="return false">
+                    <form action="{{route('admin.profile.update')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('put')
                         <div class="row">
                             <div class="mb-3 col-md-6">
                                 <label for="firstName" class="form-label">First Name</label>
@@ -60,8 +62,8 @@
                                     class="form-control"
                                     type="text"
                                     id="firstName"
-                                    name="firstName"
-                                    value="John"
+                                    name="first_name"
+                                    value="{{$profile->first_name}}"
                                     autofocus
                                 />
                             </div>
@@ -76,7 +78,7 @@
                                     type="text"
                                     id="email"
                                     name="email"
-                                    value="john.doe@example.com"
+                                    value="{{$profile->email}}"
                                     placeholder="john.doe@example.com"
                                 />
                             </div>
@@ -87,29 +89,30 @@
                                     class="form-control"
                                     id="organization"
                                     name="organization"
-                                    value="ThemeSelection"
+                                    value="{{$profile->organization}}"
                                 />
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label class="form-label" for="phoneNumber">Phone Number</label>
                                 <div class="input-group input-group-merge">
-                                    <span class="input-group-text">US (+1)</span>
+                                    <span class="input-group-text">UZ (+998)</span>
                                     <input
                                         type="text"
                                         id="phoneNumber"
-                                        name="phoneNumber"
+                                        name="ph_number"
                                         class="form-control"
                                         placeholder="202 555 0111"
+                                        value="{{$profile->ph_number}}"
                                     />
                                 </div>
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Address"  value="{{$profile->address}}"/>
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">State</label>
-                                <input class="form-control" type="text" id="state" name="state" placeholder="California" />
+                                <input class="form-control" type="text" id="state" name="state" placeholder="California" value="{{$profile->state}}"/>
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="zipCode" class="form-label">Zip Code</label>
@@ -117,9 +120,10 @@
                                     type="text"
                                     class="form-control"
                                     id="zipCode"
-                                    name="zipCode"
+                                    name="zip_code"
                                     placeholder="231465"
                                     maxlength="6"
+                                    value="{{$profile->zip_code}}"
                                 />
                             </div>
                             <div class="mb-3 col-md-6">
@@ -197,9 +201,9 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Save changes</button>
-                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                        <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-outline-danger me-2 ">Save changes</button>
+{{--                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>--}}
                         </div>
                     </form>
                 </div>

@@ -127,10 +127,10 @@
                                         <option>Anytime</option>
                                     </select>
                                 </div>
-                                <div class="mt-4">
-                                    <button type="submit" class="btn btn-primary me-2">Save changes</button>
-                                    <button type="reset" class="btn btn-outline-secondary">Discard</button>
-                                </div>
+{{--                                <div class="mt-4">--}}
+{{--                                    <button type="submit" class="btn btn-primary me-2">Save changes</button>--}}
+{{--                                    <button type="reset" class="btn btn-outline-secondary">Discard</button>--}}
+{{--                                </div>--}}
                             </div>
                         </form>
                     </div>
