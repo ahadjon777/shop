@@ -39,6 +39,7 @@
                                     class="account-file-input"
                                     hidden
                                     accept="image/png, image/jpeg"
+                                    {{asset('/storage/'.$profile->profile_photo)}}
                                 />
                             </label>
 {{--                            <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">--}}
@@ -52,7 +53,7 @@
                 </div>
                 <hr class="my-0" />
                 <div class="card-body">
-                    <form action="#" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('admin.profile.update')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="row">

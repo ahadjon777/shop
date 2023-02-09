@@ -46,7 +46,7 @@
                            </button>
                        </li>
                    </ul>
-                   <form action="{{route('admin.update')}}" method="POST" enctype="multipart/form-data">
+                   <form action="{{route('admin.setting.update')}}" method="POST" enctype="multipart/form-data">
                        @csrf
                        @method('put')
                        <div class="tab-content">
@@ -121,7 +121,7 @@
                                                <div class="input-group">
                                                    <div class="inp ut-group mb-3">
                                                        <input type="file" class="form-control" id="inputGroupFile01" name="logo">
-                                                       <img src="{{$set->logo}}" >
+                                                       <img style="width: 100px; height: 100px " src="{{asset('storage/'.$set->logo)}}" >
                                                    </div>
                                                </div>
 
