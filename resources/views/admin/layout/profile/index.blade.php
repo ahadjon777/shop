@@ -52,7 +52,7 @@
                 </div>
                 <hr class="my-0" />
                 <div class="card-body">
-                    <form action="{{route('admin.profile.update')}}" method="POST" enctype="multipart/form-data">
+                    <form action="#" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="row">
