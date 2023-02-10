@@ -20,8 +20,9 @@
                     <div class="card">
                         <div class="card-header">{{ __('Chnage Password') }}</div>
 
-                        <form action="{{route('admin.password')}}" method="POST">
+                        <form action="{{route('admin.change_password')}}" method="POST">
                             @csrf
+                            @method('put')
                             <div class="card-body">
                                 @if (session('status'))
                                     <div class="alert alert-success" role="alert">

@@ -24,7 +24,7 @@ class ProfileController extends Controller
         return view('admin.layout.profile.connection');
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Profile $profile)
     {
        $profile = Profile::where('user_id', auth()->user()->id)->first();
 
@@ -49,6 +49,7 @@ class ProfileController extends Controller
              ]);
              return redirect(route('admin.profile'));
          }
+
         $profile->update([
             'first_name'=>$request->first_name,
             'email'=>$request-> email,
@@ -63,7 +64,7 @@ class ProfileController extends Controller
             'language'=>$request->language ,
             'currency'=> $request->currency
         ]);
-//        dd($profile);
+        dd($profile);
         return redirect(route('admin.profile'));
     }
 }
