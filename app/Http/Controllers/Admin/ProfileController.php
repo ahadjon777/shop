@@ -16,7 +16,7 @@ class ProfileController extends Controller
 
     public function notification()
     {
-        return view('admin.layout.profile.notification');
+        return view('admin.layout.profile.changePassword');
     }
 
     public function connection()

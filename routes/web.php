@@ -37,6 +37,7 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:ad
     Route::get('/connection', [App\Http\Controllers\Admin\ProfileController::class, 'connection'])->name('connection');
     Route::put('/setting/edit', [\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('setting.update');
     Route::put('/profile/edit', [App\Http\Controllers\Admin\ProfileController::class,'update'])->name('profile.update');
+    Route::put('/password', [\App\Http\Controllers\Admin\ChangePasswordController::class, 'update'])->name('password');
 });
 
 
