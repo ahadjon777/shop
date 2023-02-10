@@ -16,17 +16,17 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
-            $table->string('email');
+//            $table->string('email');
             $table->bigInteger('ph_number')->nullable();
             $table->string('state')->nullable();
             $table->string('country')->nullable();
-            $table->string('time_zone')->nullable();
+            $table->string('time_zone')->nullable()->nullable();
             $table->string('last_name')->nullable();
             $table->string('organization')->nullable();
             $table->string('address')->nullable();
             $table->string('zip_code')->nullable();
-            $table->string('language')->nullable();
-            $table->string('currency')->nullable();
+            $table->string('language')->nullable()->nullable();
+            $table->string('currency')->nullable()->nullable();
             $table->timestamps();
         });
     }

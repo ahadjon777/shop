@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('settings', function (Blueprint $table) {
-            $table->string('instagram');
-            $table->string('youtube');
-            $table->string('telegram');
-            $table->string('twitter');
+            $table->string('instagram')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('telegram')->nullable();
+            $table->string('twitter')->nullable();
         });
     }
 
@@ -29,7 +29,10 @@ return new class extends Migration
     public function down()
     {
         Schema::table('settings', function (Blueprint $table) {
-            $table->dropColumn('settings');
+            $table->dropColumn('instagram');
+            $table->dropColumn('youtube');
+            $table->dropColumn('telegram');
+            $table->dropColumn('twitter');
         });
     }
 };

@@ -22,7 +22,7 @@ class SettingSeeder extends Seeder
              'site_status'=>'Yangiliklar olamiga xush kelibsiz',
              'site_name'=>'akt.uz',
              'status_mess'=>'lorem ip sum',
-             'logo'=>asset('admin/assets/img/avatars/6.png'),
+             'logo'=>"image/6.png",
              'site_info'=>'lorem ipsum!!!!',
              'name'=>'Jon',
              'company_name'=>'Soft developer',

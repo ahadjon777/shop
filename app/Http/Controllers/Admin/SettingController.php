@@ -94,6 +94,7 @@ class SettingController extends Controller
                 'telegram'=>$request->telegram,
                 'logo'=>$image_path
             ]);
+            return redirect(route('admin.setting'));
         }
         $setting->update([
             'brand_name'=>$request->brand_name,
@@ -111,9 +112,6 @@ class SettingController extends Controller
             'twitter'=>$request->twitter,
             'telegram'=>$request->telegram,
         ]);
-
-
-
        return redirect(route('admin.setting'));
     }
 

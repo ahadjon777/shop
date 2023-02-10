@@ -24,18 +24,18 @@ class ProfileController extends Controller
         return view('admin.layout.profile.connection');
     }
 
-    public function update(Request $request, Profile $profile)
+    public function update(Request $request)
     {
-       $profile = Profile::where('id', 1)->first();
+       $profile = Profile::where('user_id', auth()->user()->id)->first();
 
         $request->validate([
             'profile_photo' => 'mimes:jpeg,bmp,png,gif,svg'
         ]);
-         if($request->hasFile('profile_photo')){
+
+        if($request->hasFile('profile_photo')){
 
              $profile->update([
                  'first_name'=>$request->first_name,
-                 'email'=>$request-> email,
                  'ph_number'=> $request-> ph_number,
                  'state'=> $request-> state,
                  'country'=> $request->country,
@@ -47,6 +47,7 @@ class ProfileController extends Controller
                  'language'=>$request->language ,
                  'currency'=> $request->currency
              ]);
+             return redirect(route('admin.profile'));
          }
         $profile->update([
             'first_name'=>$request->first_name,
@@ -63,6 +64,6 @@ class ProfileController extends Controller
             'currency'=> $request->currency
         ]);
 //        dd($profile);
-        return redirect(route('admin.profile.update'));
+        return redirect(route('admin.profile'));
     }
 }
