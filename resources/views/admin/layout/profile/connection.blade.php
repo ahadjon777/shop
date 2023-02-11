@@ -21,6 +21,7 @@
                         >
                     </li>
                 </ul>
+
                 <div class="row">
                     <div class="col-md-6 col-12 mb-md-0 mb-4">
                         <div class="card">
@@ -39,7 +40,22 @@
                                         </div>
                                         <div class="col-3 text-end">
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input float-end" type="checkbox" role="switch" />
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Google</button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+{{--                                                <input class="form-check-input float-end" type="button" role="switch" />--}}
                                             </div>
                                         </div>
                                     </div>
@@ -55,7 +71,22 @@
                                         </div>
                                         <div class="col-3 text-end">
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input float-end" type="checkbox" role="switch" checked />
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Slack</button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+{{--                                                <input class="form-check-input float-end" type="checkbox" role="switch" checked />--}}
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +102,21 @@
                                         </div>
                                         <div class="col-3 text-end">
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input float-end" type="checkbox" role="switch" />
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Github</button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +137,22 @@
                                         </div>
                                         <div class="col-3 text-end">
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input float-end" type="checkbox" role="switch" checked />
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Mailchimp</button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+{{--                                                <input class="form-check-input float-end" type="checkbox" role="switch" checked />--}}
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +168,22 @@
                                         </div>
                                         <div class="col-3 text-end">
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input float-end" type="checkbox" role="switch" checked />
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Asana</button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+{{--                                                <input class="form-check-input float-end" type="checkbox" role="switch" checked />--}}
                                             </div>
                                         </div>
                                     </div>
@@ -138,9 +213,21 @@
                                             <small class="text-muted">Not Connected</small>
                                         </div>
                                         <div class="col-4 col-sm-5 text-end">
-                                            <button type="button" class="btn btn-icon btn-outline-secondary">
-                                                <i class="bx bx-link-alt"></i>
-                                            </button>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Facebook</button>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Send message</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
