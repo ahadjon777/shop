@@ -64,7 +64,7 @@ class ProfileController extends Controller
             'language'=>$request->language ,
             'currency'=> $request->currency
         ]);
-        dd($profile);
+//        dd($profile);
         return redirect(route('admin.profile'));
     }
 }

@@ -71,25 +71,26 @@ class ChangePasswordController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(Request $request, ChangePassword $changePassword)
+    public function update(Request $request)
     {
         $change=auth()->user();
-
-
+//        dd($request->all());
         $request->validate([
             'old_password' => 'required',
-            'new_password' => 'required|confirmed',
-            'confirm_password'=>'required|same:new_password'
+            'password' => 'required|confirmed',
+
         ]);
+//        dd($request);
         if (Hash::check($request->old_password, $change->password)){
             $change->update([
-                'password'=>bcrypt($request->new_password)
+                'password'=>Hash::make($request->password)
             ]);
-            return redirect()->back()->with('message', 'password successful update.');
+            return redirect()->back()->with('status', 'password successful update.');
 
         }
+
         else{
-            return redirect()->back()->with('message','old password does not matched!');
+            return redirect()->back()->with('error','old password does not matched!');
         }
         return redirect(route('admin.profile'));
 
