@@ -121,7 +121,7 @@
                                                <div class="input-group">
                                                    <div class="inp ut-group mb-3">
                                                        <input type="file" class="form-control" id="inputGroupFile01" name="logo">
-                                                       <img style="width: 100px; height: 100px " src="{{asset('storage/'.$set->logo)}}" >
+                                                       <img style="width: 100px; height: 100px " src=" @if($set->logo) {{asset('storage/'.$set->logo)}} @else {{asset('admin/assets/img/avatars/10.png')}} @endif " >
                                                    </div>
                                                </div>
 

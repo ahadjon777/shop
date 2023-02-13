@@ -36,25 +36,31 @@
                                     <div class="flex-grow-1 row">
                                         <div class="col-9 mb-sm-0 mb-2">
                                             <h6 class="mb-0">Google</h6>
-                                            <small class="text-muted">Calendar and contacts</small>
+                                            <small class="text-muted">@if(isset($setting->google)) {{$setting->google}}@endif</small>
                                         </div>
                                         <div class="col-3 text-end">
                                             <div class="form-check form-switch">
                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Google</button>
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                <form action="{{route('admin.profile.social', 'google')}}" method="POST">
+                                                    @method('put')
+                                                    @csrf
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Google account</h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <input name="google" type="text" class="form-control">
+                                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+
+                                                </form>
+
 {{--                                                <input class="form-check-input float-end" type="button" role="switch" />--}}
                                             </div>
                                         </div>
