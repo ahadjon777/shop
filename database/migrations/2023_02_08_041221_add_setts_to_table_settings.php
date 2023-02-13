@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string('youtube')->nullable();
             $table->string('telegram')->nullable();
             $table->string('twitter')->nullable();
+            $table->string('google')->nullable();
+            $table->string('slack')->nullable();
+            $table->string('github')->nullable();
+            $table->string('mailchimp')->nullable();
+            $table->string('asana')->nullable();
+            $table->string('facebook')->nullable();
         });
     }
 
@@ -33,6 +39,12 @@ return new class extends Migration
             $table->dropColumn('youtube');
             $table->dropColumn('telegram');
             $table->dropColumn('twitter');
+            $table->dropColumn('google');
+            $table->dropColumn('slack');
+            $table->dropColumn('github');
+            $table->dropColumn('mailchimp');
+            $table->dropColumn('asana');
+            $table->dropColumn('facebook');
         });
     }
 };

@@ -28,7 +28,8 @@ class ProfileSeeder extends Seeder
             'address'=>      'Yunusabad 10-mavze',
             'zip_code'=>     '777777',
             'language'=>     'uzbek',
-            'currency'=>     '1.000.000$'
+            'currency'=>     '1.000.000$',
+            'user_id'=>     1
         ]);
     }
 }

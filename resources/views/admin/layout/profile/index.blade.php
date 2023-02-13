@@ -7,28 +7,34 @@
         <div class="col-md-12">
             <ul class="nav nav-pills flex-column flex-md-row mb-3">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{route('admin.profile')}}" id="account"><i class="bx bx-user me-1"></i> Account</a>
+                    <a class="nav-link active" href="{{route('admin.profile')}}" id="account"><i
+                            class="bx bx-user me-1"></i> Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.notification')}}" id="notification"><i class="bx bx-bell me-1"></i> Notifications</a>
+                    <a class="nav-link" href="{{route('admin.notification')}}" id="notification"><i
+                            class="bx bx-bell me-1"></i> Notifications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.connection')}}" id="connection"><i class="bx bx-link-alt me-1"></i> Connections </a>
+                    <a class="nav-link" href="{{route('admin.connection')}}" id="connection"><i
+                            class="bx bx-link-alt me-1"></i> Connections </a>
                 </li>
             </ul>
             <div class="card mb-4">
                 <h5 class="card-header">Profile Details</h5>
+                @if(session('success'))
+                    <h4 class="text-center">{{session('success')}}</h4>
+                @endif
+{{--                @if(!is_null(asset($profile->profile_photo))){{asset('/storage/'.$profile->profile_photo)}} @else {{asset('admin/assets/img/avatars/10.png'}}@endif--}}
                 <!-- Account -->
                 <div class="card-body">
                     <div class="d-flex align-items-start align-items-sm-center gap-4">
                         <img
-                            src="{{asset('admin/assets/img/avatars/1.jpg')}}"
+                            src="{{asset('admin/assets/img/avatars/10.png')}}"
                             alt="user-avatar"
                             class="d-block rounded"
                             height="100"
                             width="100"
-                            id="uploadedAvatar"
-                        />
+                            id="uploadedAvatar"/>
                         <div class="button-wrapper">
                             <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
                                 <span class="d-none d-sm-block">Upload new photo</span>
@@ -38,20 +44,15 @@
                                     id="upload"
                                     class="account-file-input"
                                     hidden
+                                    name="photo"
                                     accept="image/png, image/jpeg"
-                                    {{asset('/storage/'.$profile->profile_photo)}}
                                 />
                             </label>
-{{--                            <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">--}}
-{{--                                <i class="bx bx-reset d-block d-sm-none"></i>--}}
-{{--                                <span class="d-none d-sm-block">Reset</span>--}}
-{{--                            </button>--}}
-
                             <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
                         </div>
                     </div>
                 </div>
-                <hr class="my-0" />
+                <hr class="my-0"/>
                 <div class="card-body">
                     <form action="{{route('admin.profile.update')}}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -70,7 +71,7 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="lastName" class="form-label">Last Name</label>
-                                <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
+                                <input class="form-control" type="text" name="lastName" id="lastName" value="Doe"/>
                             </div>
 
                             <div class="mb-3 col-md-6">
@@ -99,11 +100,13 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Address"  value="{{$profile->address}}"/>
+                                <input type="text" class="form-control" id="address" name="address"
+                                       placeholder="Address" value="{{$profile->address}}"/>
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">State</label>
-                                <input class="form-control" type="text" id="state" name="state" placeholder="California" value="{{$profile->state}}"/>
+                                <input class="form-control" type="text" id="state" name="state" placeholder="California"
+                                       value="{{$profile->state}}"/>
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="zipCode" class="form-label">Zip Code</label>
@@ -119,7 +122,7 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label class="form-label" for="country">Country</label>
-                                <select id="country" class="select2 form-select">
+                                <select id="country" class="select2 form-select" name="country">
                                     <option value="">Select</option>
                                     <option value="Australia">Australia</option>
                                     <option value="Bangladesh">Bangladesh</option>
@@ -149,7 +152,7 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="language" class="form-label">Language</label>
-                                <select id="language" class="select2 form-select">
+                                <select id="language" class="select2 form-select" name="language">
                                     <option value="">Select Language</option>
                                     <option value="en">English</option>
                                     <option value="fr">French</option>
@@ -159,7 +162,7 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="timeZones" class="form-label">Timezone</label>
-                                <select id="timeZones" class="select2 form-select">
+                                <select id="timeZones" class="select2 form-select" name="time_zone">
                                     <option value="">Select Timezone</option>
                                     <option value="-12">(GMT-12:00) International Date Line West</option>
                                     <option value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -183,7 +186,7 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="currency" class="form-label">Currency</label>
-                                <select id="currency" class="select2 form-select">
+                                <select id="currency" class="select2 form-select" name="'currency">
                                     <option value="">Select Currency</option>
                                     <option value="usd">USD</option>
                                     <option value="euro">Euro</option>
@@ -194,7 +197,7 @@
                         </div>
                         <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end">
                             <button type="submit" class="btn btn-outline-danger me-2 ">Save changes</button>
-{{--                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>--}}
+                            {{--                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>--}}
                         </div>
                     </form>
                 </div>
@@ -203,6 +206,7 @@
 
         </div>
     </div>
-
+@endsection
+@section('js')
 
 @endsection
