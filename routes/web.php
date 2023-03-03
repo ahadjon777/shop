@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('/admin.master.main');
+})->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -41,6 +41,8 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:ad
 
     Route::put('/social/{name}', [App\Http\Controllers\Admin\ProfileController::class,'social'])->name('profile.social');
 
+    Route::get('/table', [\App\Http\Controllers\TableController::class, 'index'])->name('all.table');
+    Route::resource('table/computer', \App\Http\Controllers\Computer\CompyuterController::class);
 
 });
 
