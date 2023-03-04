@@ -148,8 +148,8 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="ui-alerts.html" class="menu-link">
-                        <div data-i18n="Alerts">Alerts</div>
+                    <a href="{{route('admin.monoblok.index')}}" class="menu-link">
+                        <div data-i18n="Alerts">Monoblok</div>
                     </a>
                 </li>
                 <li class="menu-item">
