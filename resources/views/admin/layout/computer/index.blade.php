@@ -37,7 +37,7 @@
                     <td>{{$com->ishlangan_sana}}</td>
                     <td>{{$com->hisob_sana}}</td>
                     <td>{{$com->olindi}}</td>
-                    <td>{{$com->topshirildi}}</td>
+                    <td>{{$com->topshirdi}}</td>
                 </tr>
             @endforeach
             </tbody>
