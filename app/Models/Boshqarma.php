@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Boshqarma extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
 }

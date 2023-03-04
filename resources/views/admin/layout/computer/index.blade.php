@@ -7,6 +7,7 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Boshqarmalar</th>
                 <th scope="col">Model</th>
                 <th scope="col">Seria nomeri</th>
                 <th scope="col">QMD model</th>
@@ -26,6 +27,7 @@
             @foreach($comp as $com)
                 <tr>
                     <td>{{$c++}}</td>
+                    <td>{{$com->boshqarma_name}}</td>
                     <td>{{$com->model}}</td>
                     <td>{{$com->seria_name}}</td>
                     <td>{{$com->qmd_model}}</td>

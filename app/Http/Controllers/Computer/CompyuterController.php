@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Computer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Boshqarma;
 use App\Models\Compyuter;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,8 @@ class CompyuterController extends Controller
      */
     public function create()
     {
-        return view('admin.layout.computer.create');
+        $boshqarma = Boshqarma::get();
+        return view('admin.layout.computer.create',compact('boshqarma'));
     }
 
     /**

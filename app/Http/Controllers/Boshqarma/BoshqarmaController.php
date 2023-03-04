@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Boshqarma;
 
 use App\Http\Controllers\Controller;
 use App\Models\Boshqarma;
+use App\Models\Monoblok;
 use Illuminate\Http\Request;
 
 class BoshqarmaController extends Controller
@@ -15,7 +16,9 @@ class BoshqarmaController extends Controller
      */
     public function index()
     {
-        return view('admin.layout.boshqarma.index');
+        $boshqarma = Boshqarma::with('boshqarma')->get();
+        $c=1;
+        return view('admin.layout.boshqarma.index',compact('boshqarma','c'));
     }
 
     /**
@@ -36,7 +39,11 @@ class BoshqarmaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate(['name'=>'required']);
+        Boshqarma::create([
+            'name'=>$request->name,
+        ]);
+        return redirect(route('admin.boshqarma.index'));
     }
 
     /**
@@ -45,9 +52,13 @@ class BoshqarmaController extends Controller
      * @param  \App\Models\Boshqarma  $boshqarma
      * @return \Illuminate\Http\Response
      */
-    public function show(Boshqarma $boshqarma)
+    public function show($id)
     {
-        //
+        /*$boshqarma = Boshqarma::where('id',$id)->first();*/
+        /*$boshqarma = Boshqarma::get('id');
+        $mono = Monoblok::where('boshqarma_id',$id);*/
+
+       /* return view('admin.layout.boshqarma.show', compact('boshqarma','mono'));*/
     }
 
     /**
@@ -81,6 +92,7 @@ class BoshqarmaController extends Controller
      */
     public function destroy(Boshqarma $boshqarma)
     {
-        //
+        $boshqarma->delete();
+        return redirect(route('admin.boshqarma.index'));
     }
 }
