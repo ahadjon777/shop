@@ -4,7 +4,7 @@
               <span class="app-brand-logo demo">
                 <img src="{{asset('admin/assets/img/logo/1.png')}}" style="max-width: 50px">
               </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">shop</span>
+            <span class="menu-text fw-bolder ms-2" style="font-size: 30px">MV ABM</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
