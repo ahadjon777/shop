@@ -267,13 +267,13 @@
 {{--            </a>--}}
 {{--        </li>--}}
 
-{{--        <!-- Forms & Tables -->--}}
+        <!-- Forms & Tables -->
 {{--        <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>--}}
-{{--        <!-- Forms -->--}}
+        <!-- Forms -->
 {{--        <li class="menu-item">--}}
 {{--            <a href="javascript:void(0);" class="menu-link menu-toggle">--}}
 {{--                <i class="menu-icon tf-icons bx bx-detail"></i>--}}
-{{--                <div data-i18n="Form Elements">Form Elements</div>--}}
+{{--                <div data-i18n="Form Elements">Boshqarmalar</div>--}}
 {{--            </a>--}}
 {{--            <ul class="menu-sub">--}}
 {{--                <li class="menu-item">--}}
@@ -309,9 +309,9 @@
 
         <!--Users -->
         <li class="menu-item">
-            <a href="#" class="menu-link">
+            <a href="{{route('admin.boshqarma.index')}}" class="menu-link">
                 <i class='menu-icon bx bx-group'></i>
-                <div> All Users</div>
+                <div> Boshqarmalar </div>
             </a>
         </li>
         <li class="menu-item">

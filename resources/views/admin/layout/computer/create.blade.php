@@ -5,9 +5,13 @@
         <form action="{{route('admin.computer.store')}}" method="POST">
             @csrf
             @method('post')
-            <div class="row mt-5 " style=" padding-left: 80px">
-                <h2 class="mb-0 text-center mb-5 ">Axborotlashtirish bosh markazi: Kompyuterlar uchun</h2>
+            <div class="row mt-3 " style=" padding-left: 80px">
+                <h2 class="mb-0 text-center  mb-3">Axborotlashtirish bosh markazi: Kompyuterlar uchun</h2>
                 <div class="col-md-5  mb-3 bg-white shadow">
+                    <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Boshqarma nomi</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1"  name="boshqarma_id">
+                    </div>
                     <div class="mb-2">
                         <label for="exampleInputEmail1" class="form-label">Modeli</label>
                         <input type="text" class="form-control" id="exampleInputEmail1"  name="model">
@@ -32,8 +36,6 @@
                         <label for="exampleInputEmail1" class="form-label">SSD Model</label>
                         <input type="text" class="form-control" id="exampleInputEmail1"  name="ssd_model">
                     </div>
-
-                    <button type="submit" class="btn btn-primary mb-3 ">Create us</button>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5 mb-2 bg-white shadow">
@@ -61,7 +63,7 @@
                         <label for="exampleInputEmail1" class="form-label">Topshirildi</label>
                         <input type="datetime-local" class="form-control" id="exampleInputEmail1"  name="topshirdi">
                     </div>
-
+                    <button type="submit" class="btn rounded-pill btn-primary mt-4 ">Create us</button>
                 </div>
             </div>
         </form>

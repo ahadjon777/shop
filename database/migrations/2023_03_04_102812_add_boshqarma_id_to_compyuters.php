@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('compyuters', function (Blueprint $table) {
-            $table->string('boshqarma_name');
+            $table->foreignId('boshqarma_id')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('compyuters', function (Blueprint $table) {
-            $table->dropColumn('boshqarma_name');
+            $table->dropColumn('boshqarma_id');
         });
     }
 };

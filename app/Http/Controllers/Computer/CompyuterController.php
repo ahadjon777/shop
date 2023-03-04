@@ -51,6 +51,7 @@ class CompyuterController extends Controller
             'hisob_sana'=>$request->hisob_sana,
             'olindi'=>$request->olindi,
             'topshirdi'=>$request->topshirdi,
+            'boshqarma_name'=>$request->boshqarma_id
         ]);
         return redirect(route('admin.computer.index'));
     }
