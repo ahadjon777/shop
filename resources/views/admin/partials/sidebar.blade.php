@@ -4,7 +4,7 @@
               <span class="app-brand-logo demo">
                 <img src="{{asset('admin/assets/img/logo/1.png')}}" style="max-width: 50px">
               </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">shop</span>
+            <span class="app-brand-text fw-bolder ms-2" style="font-size: 30px">MV ABM</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -309,9 +309,9 @@
 
         <!--Users -->
         <li class="menu-item">
-            <a href="#" class="menu-link">
+            <a href="{{route('admin.boshqarma.index')}}" class="menu-link">
                 <i class='menu-icon bx bx-group'></i>
-                <div> All Users</div>
+                <div>Boshqarmalar</div>
             </a>
         </li>
         <li class="menu-item">

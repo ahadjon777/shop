@@ -44,6 +44,7 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:ad
     Route::get('/table', [\App\Http\Controllers\TableController::class, 'index'])->name('all.table');
     Route::resource('table/computer', \App\Http\Controllers\Computer\CompyuterController::class);
     Route::resource('table/monoblok',\App\Http\Controllers\Monoblok\MonoblokController::class);
+    Route::resource('/boshqarma', \App\Http\Controllers\Boshqarma\BoshqarmaController::class);
 });
 
 
