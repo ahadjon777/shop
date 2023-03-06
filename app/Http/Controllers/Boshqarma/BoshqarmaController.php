@@ -41,7 +41,7 @@ class BoshqarmaController extends Controller
     {
         $valideted = $request->validate(['name'=>'required']);
         Boshqarma::create([
-            'name'=>$request->name
+            'name'=>$request->name,
         ]);
         return redirect(route('admin.boshqarma.index'));
     }

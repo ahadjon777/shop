@@ -27,6 +27,7 @@ class CompyuterController extends Controller
      */
     public function create()
     {
+
         return view('admin.layout.computer.create');
     }
 
@@ -38,6 +39,8 @@ class CompyuterController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request->all());
+
         Compyuter::create([
             'model'=>$request->model,
             'seria_name'=>$request->seria_name,
@@ -51,7 +54,7 @@ class CompyuterController extends Controller
             'hisob_sana'=>$request->hisob_sana,
             'olindi'=>$request->olindi,
             'topshirdi'=>$request->topshirdi,
-            'boshqarma_name'=>$request->boshqarma_id
+            'boshqarma_id'=>$request->boshqarma_id
         ]);
         return redirect(route('admin.computer.index'));
     }
