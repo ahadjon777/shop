@@ -10,5 +10,4 @@ class Boshqarma extends Model
     use HasFactory;
     protected $guarded =[];
 
-
 }

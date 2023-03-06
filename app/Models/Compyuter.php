@@ -10,8 +10,8 @@ class Compyuter extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function getBoshqarma()
+        public function boshqarma()
     {
-        return $this->hasOne(Compyuter::class, 'boshqarma_id', 'id');
+        return $this->hasOne(Boshqarma::class, 'boshqarma_id', 'id');
     }
 }

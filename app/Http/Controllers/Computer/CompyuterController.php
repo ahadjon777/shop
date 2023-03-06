@@ -28,7 +28,8 @@ class CompyuterController extends Controller
      */
     public function create()
     {
-        $boshqarma = Boshqarma::all()->where('name');
+          $comp = Compyuter::all()->where('id');
+          dd($comp);
 //        $boshqarma = Compyuter::all()->where('id', 'boshqarma_id');
 //        $names = Compyuter::all()->where('id', 'name');
 //        dd($boshqarma);
