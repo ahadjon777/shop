@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('monobloks', function (Blueprint $table) {
-            $table->foreignId()->nullable->constrained('monobloks');
+            $table->foreignId('boshqarma_id')->nullable->constrained();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('monobloks', function (Blueprint $table) {
-            //
+            $table->dropForeign(['boshqarma_id']);
         });
     }
 };

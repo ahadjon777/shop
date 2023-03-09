@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Monoblok;
 
 use App\Http\Controllers\Controller;
+use App\Models\Boshqarma;
 use App\Models\Monoblok;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,10 @@ class MonoblokController extends Controller
     public function index()
     {
         $mono= Monoblok::all();
+        $monob = Monoblok::with('boshqarma_monoblok')->get();
+        $boshqarma = Boshqarma::with('monoblok')->get();
         $monobloklar = 1;
-        return view('admin.layout.monoblok.index', compact('mono','monobloklar'));
+        return view('admin.layout.monoblok.index', compact('mono','boshqarma','monob','monobloklar'));
     }
 
     /**
@@ -27,7 +30,9 @@ class MonoblokController extends Controller
      */
     public function create()
     {
-        return view('admin.layout.monoblok.create');
+        $boshqar = Boshqarma::with('monoblok')->get();
+
+        return view('admin.layout.monoblok.create',compact('boshqar'));
     }
 
     /**
@@ -46,6 +51,7 @@ class MonoblokController extends Controller
             'hisob_sana'=>$request->hisob_sana,
             'olindi'=>$request->olindi,
             'topshirdi'=>$request->topshirdi,
+            'boshqarma_id'=>$request->boshqarma_id
         ]);
 //        dd()
         return redirect(route('admin.monoblok.index'));

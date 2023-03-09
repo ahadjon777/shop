@@ -23,7 +23,6 @@
             </tr>
             </thead>
             <tbody>
-
             @foreach($comp as $com)
                 <tr>
                     <td>{{$c++}}</td>

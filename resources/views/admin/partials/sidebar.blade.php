@@ -144,17 +144,17 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="{{route('admin.computer.index')}}" class="menu-link">
-                        <div data-i18n="Accordion">Kompyuter</div>
+                        <div data-i18n="Kompyuter">Kompyuter</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="{{route('admin.monoblok.index')}}" class="menu-link">
-                        <div data-i18n="Alerts">Monoblok</div>
+                        <div data-i18n="Monoblok">Monoblok</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="ui-badges.html" class="menu-link">
-                        <div data-i18n="Badges">Badges</div>
+                        <div data-i18n="Badges">Printer chala</div>
                     </a>
                 </li>
                 <li class="menu-item">

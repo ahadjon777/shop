@@ -9,4 +9,7 @@ class Monoblok extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    public function boshqarma_monoblok() {
+        return $this->hasOne(Boshqarma::class);
+    }
 }
