@@ -27,7 +27,8 @@
             @foreach($comp as $com)
                 <tr>
                     <td>{{$c++}}</td>
-                    <td>{{$com->model}}</td>
+                    <td>{{$com->boshqarma_id}}</td>
+                     <td>{{$com->model}}</td>
                     <td>{{$com->seria_name}}</td>
                     <td>{{$com->qmd_model}}</td>
                     <td>{{$com->qmd_seria}}</td>

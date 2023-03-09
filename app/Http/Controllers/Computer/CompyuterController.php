@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Computer;
 use App\Http\Controllers\Controller;
 use App\Models\Boshqarma;
 use App\Models\Compyuter;
+use http\Message\Body;
 use Illuminate\Http\Request;
+use function Pest\Laravel\get;
 
 class CompyuterController extends Controller
 {
@@ -17,8 +19,11 @@ class CompyuterController extends Controller
     public function index()
     {
         $comp = Compyuter::all();
+        $compu = Compyuter::with('boshqarma')->get();
+        $boshqarm = Boshqarma::with('computer')->get();
         $c = 1;
-        return view('admin.layout.computer.index', compact('comp', 'c'));
+
+        return view('admin.layout.computer.index', compact('comp','boshqarm', 'c','compu'));
     }
 
     /**
@@ -28,15 +33,17 @@ class CompyuterController extends Controller
      */
     public function create()
     {
-          $comp = Compyuter::all()->where('id');
-          dd($comp);
+
+
+          $boshqar = Boshqarma::wiht('computer')->get();
+
 //        $boshqarma = Compyuter::all()->where('id', 'boshqarma_id');
 //        $names = Compyuter::all()->where('id', 'name');
 //        dd($boshqarma);
-        return view('admin.layout.computer.create', compact('boshqarma',));
+        return view('admin.layout.computer.create', compact('boshqar'));
     }
 
-    /**
+    /**---------
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
