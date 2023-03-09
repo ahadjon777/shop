@@ -7,6 +7,7 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Boshqarma nomi</th>
                 <th scope="col">Model</th>
                 <th scope="col">Seria nomeri</th>
                 <th scope="col">Ozu hajmi</th>
@@ -28,6 +29,7 @@
                     <td>{{$mon->hisob_sana}}</td>
                     <td>{{$mon->olindi}}</td>
                     <td>{{$mon->topshirdi}}</td>
+                    <td>{{$mon->#}}</td>
                 </tr>
             @endforeach
             </tbody>

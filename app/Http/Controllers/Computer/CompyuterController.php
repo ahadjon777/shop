@@ -33,13 +33,10 @@ class CompyuterController extends Controller
      */
     public function create()
     {
+          $boshqar = Boshqarma::with('computer')->get();
+dd($boshqar);
 
 
-          $boshqar = Boshqarma::wiht('computer')->get();
-
-//        $boshqarma = Compyuter::all()->where('id', 'boshqarma_id');
-//        $names = Compyuter::all()->where('id', 'name');
-//        dd($boshqarma);
         return view('admin.layout.computer.create', compact('boshqar'));
     }
 

@@ -9,6 +9,16 @@
                 <h2 class="mb-0 text-center mb-5 ">Axborotlashtirish bosh markazi: Monobloklar uchun</h2>
                 <div class="col-md-5  mb-3 bg-white shadow">
                     <div class="mb-2">
+
+                        <select name="boshqarma_id" id="boshqarma_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="margin-top: 20px;">
+                            <option selected> Boshqarmalar</option>
+                            @foreach($boshqar as $bosh)
+                                <option value="{{$bosh->id}}">{{$bosh->name}}</option>
+                            @endforeach
+                        </select>
+
+                    </div>
+                    <div class="mb-2">
                         <label for="exampleInputEmail1" class="form-label">Modeli</label>
                         <input type="text" class="form-control" id="exampleInputEmail1"  name="model">
                     </div>

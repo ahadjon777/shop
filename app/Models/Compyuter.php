@@ -12,6 +12,6 @@ class Compyuter extends Model
 
         public function boshqarma()
     {
-        return $this->belongsTo(Boshqarma::class);
+        return $this->hasOne(Boshqarma::class);
     }
 }

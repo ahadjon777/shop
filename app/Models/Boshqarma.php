@@ -11,6 +11,10 @@ class Boshqarma extends Model
     protected $guarded =[];
 
     public function computer(){
-        return $this->hasMany(Compyuter::class,'boshqarma_id','id');
+        return $this->belongsTo(Compyuter::class,'boshqarma_id');
+    }
+
+    public function monoblok() {
+        return $this->belongsTo(Compyuter::class,'boshqarma_id');
     }
 }
