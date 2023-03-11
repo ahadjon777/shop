@@ -55,11 +55,19 @@ class BoshqarmaController extends Controller
      */
     public function show(Boshqarma $boshqarma)
     {
+        $comp = Compyuter::all();
+//        dd($comp);/
         $b = 1;
         $comp = Compyuter::where('id', 'boshqarma_id')->get();
 //        dd($comp->all());
         return view('admin.layout.boshqarma.show', compact('comp', 'b'));
     }
+
+//    public function getComputer(Request $request)
+//    {
+//          $comp = Compyuter::all();
+//
+//    }
 
     /**
      * Show the form for editing the specified resource.
@@ -69,7 +77,7 @@ class BoshqarmaController extends Controller
      */
     public function edit(Boshqarma $boshqarma)
     {
-        //
+        return view('admin.layout.boshqarma.edit', compact('boshqarma'));
     }
 
     /**
@@ -81,7 +89,10 @@ class BoshqarmaController extends Controller
      */
     public function update(Request $request, Boshqarma $boshqarma)
     {
-        //
+        $boshqarma->update([
+           'name'=>$request->name,
+        ]);
+        return redirect(route('admin.boshqarma.index'));
     }
 
     /**

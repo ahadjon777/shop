@@ -20,7 +20,7 @@
                    @csrf
                    @method('delete')
                    <td>
-                       <a href="#" class="btn rounded-pill btn-success">O'zgartirish</a>
+                       <a href="{{route('admin.boshqarma.edit', $bosh)}}" class="btn rounded-pill btn-success">O'zgartirish</a>
                        <a href="{{route('admin.boshqarma.show', $bosh)}}" class="btn rounded-pill btn-primary">Ko'rish</a>
                        <button type="submit" class="btn rounded-pill btn-danger">Delete</button>
                    </td>

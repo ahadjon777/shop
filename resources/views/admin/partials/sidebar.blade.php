@@ -153,8 +153,8 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="ui-badges.html" class="menu-link">
-                        <div data-i18n="Badges">Printer chala</div>
+                    <a href="{{route('admin.printer.index')}}" class="menu-link">
+                        <div data-i18n="Badges">Printer</div>
                     </a>
                 </li>
                 <li class="menu-item">

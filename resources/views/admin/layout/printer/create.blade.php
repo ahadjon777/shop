@@ -1,8 +1,8 @@
 @extends('admin.master.main')
 @section('content')
 
-    <div class="container">
-        <form action="{{route('admin.monoblok.store')}}" method="POST">
+    <div class="container " >
+        <form action="{{route('admin.printer.store')}}" method="POST">
             @csrf
             @method('post')
             <div class="row mt-5" style="padding-left:  80px">
@@ -12,7 +12,7 @@
 
                         <select name="boshqarma_id" id="boshqarma_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="margin-top: 20px;">
                             <option selected> Boshqarmalar</option>
-                            @foreach($boshqar as $bosh)
+                            @foreach($boshqarma as $bosh)
                                 <option value="{{$bosh->id}}">{{$bosh->name}}</option>
                             @endforeach
                         </select>
@@ -25,10 +25,6 @@
                     <div class="mb-2">
                         <label for="exampleInputEmail1" class="form-label">Seriya nomeri</label>
                         <input type="text" class="form-control" id="exampleInputEmail1"  name="seria_name">
-                    </div>
-                    <div class="mb-2">
-                        <label for="exampleInputEmail1" class="form-label">OZU hajmi</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1"  name="ozu_hajmi">
                     </div>
                     <button type="submit" class="btn btn-primary mb-3 ">Create us</button>
                 </div>

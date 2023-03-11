@@ -18,17 +18,16 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($mono as $mon)
+            @foreach($printer as $print)
                 <tr>
-                    <td>{{$monobloklar++}}</td>
-                    <td>{{$mon->boshqarma_id}}</td>
-                    <td>{{$mon->model}}</td>
-                    <td>{{$mon->ozu_hajmi}}</td>
-                    <td>{{$mon->seria_name}}</td>
-                    <td>{{$mon->ishlangan_sana}}</td>
-                    <td>{{$mon->hisob_sana}}</td>
-                    <td>{{$mon->olindi}}</td>
-                    <td>{{$mon->topshirdi}}</td>
+                    <td>{{$p++}}</td>
+                    <td>{{$print->boshqarma_id}}</td>
+                    <td>{{$print->model}}</td>
+                    <td>{{$print->seria_name}}</td>
+                    <td>{{$print->ishlangan_sana}}</td>
+                    <td>{{$print->hisob_sana}}</td>
+                    <td>{{$print->olindi}}</td>
+                    <td>{{$print->topshirdi}}</td>
                 </tr>
             @endforeach
             </tbody>
