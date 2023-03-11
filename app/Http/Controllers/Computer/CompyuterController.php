@@ -19,11 +19,8 @@ class CompyuterController extends Controller
     public function index()
     {
         $comp = Compyuter::all();
-        $compu = Compyuter::with('boshqarma')->get();
-        $boshqarm = Boshqarma::with('computer')->get();
         $c = 1;
-
-        return view('admin.layout.computer.index', compact('comp','boshqarm', 'c','compu'));
+        return view('admin.layout.computer.index', compact('comp','c'));
     }
 
     /**
@@ -33,11 +30,8 @@ class CompyuterController extends Controller
      */
     public function create()
     {
-          $boshqar = Boshqarma::with('computer')->get();
-dd($boshqar);
-
-
-        return view('admin.layout.computer.create', compact('boshqar'));
+          $boshqarma = Boshqarma::with('computer')->get();
+        return view('admin.layout.computer.create', compact('boshqarma'));
     }
 
     /**---------

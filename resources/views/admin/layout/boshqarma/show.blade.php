@@ -2,9 +2,6 @@
 @section('content')
 
     <div class="container mt-5 ">
-       <div>
-           <a href="{{route('admin.computer.create')}}" class="btn rounded-pill btn-success">create</a>
-       </div>
 
         <table class="table table-striped table-bordered table-hover mt-3">
             <thead>
@@ -26,22 +23,21 @@
             </thead>
             <tbody>
 
-{{--            @foreach($comp as $com)--}}
+{{--            @foreach($boshqarma as $bosh)--}}
 {{--                <tr>--}}
-{{--                    <td>{{$c++}}</td>--}}
-{{--                    <td>{{$com->boshqarma_name}}</td>--}}
-{{--                    <td>{{$com->model}}</td>--}}
-{{--                    <td>{{$com->seria_name}}</td>--}}
-{{--                    <td>{{$com->qmd_model}}</td>--}}
-{{--                    <td>{{$com->qmd_seria}}</td>--}}
-{{--                    <td>{{$com->ssd_number}}</td>--}}
-{{--                    <td>{{$com->ssd_model}}</td>--}}
-{{--                    <td>{{$com->monitor_number}}</td>--}}
-{{--                    <td>{{$com->monitor_model}}</td>--}}
-{{--                    <td>{{$com->ishlangan_sana}}</td>--}}
-{{--                    <td>{{$com->hisob_sana}}</td>--}}
-{{--                    <td>{{$com->olindi}}</td>--}}
-{{--                    <td>{{$com->topshirdi}}</td>--}}
+{{--                    <td>{{$b++}}</td>--}}
+{{--                    <td>{{$bosh->model}}</td>--}}
+{{--                    <td>{{$bosh->seria_name}}</td>--}}
+{{--                    <td>{{$bosh->qmd_model}}</td>--}}
+{{--                    <td>{{$bosh->qmd_seria}}</td>--}}
+{{--                    <td>{{$bosh->ssd_number}}</td>--}}
+{{--                    <td>{{$bosh->ssd_model}}</td>--}}
+{{--                    <td>{{$bosh->monitor_number}}</td>--}}
+{{--                    <td>{{$bosh->monitor_model}}</td>--}}
+{{--                    <td>{{$bosh->ishlangan_sana}}</td>--}}
+{{--                    <td>{{$bosh->hisob_sana}}</td>--}}
+{{--                    <td>{{$bosh->olindi}}</td>--}}
+{{--                    <td>{{$bosh->topshirdi}}</td>--}}
 {{--                </tr>--}}
 {{--            @endforeach--}}
             </tbody>

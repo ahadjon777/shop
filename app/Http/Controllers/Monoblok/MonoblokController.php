@@ -17,10 +17,9 @@ class MonoblokController extends Controller
     public function index()
     {
         $mono= Monoblok::all();
-        $monob = Monoblok::with('boshqarma_monoblok')->get();
-        $boshqarma = Boshqarma::with('monoblok')->get();
+//        dd($mono->all());
         $monobloklar = 1;
-        return view('admin.layout.monoblok.index', compact('mono','boshqarma','monob','monobloklar'));
+        return view('admin.layout.monoblok.index', compact('mono', 'monobloklar'));
     }
 
     /**
@@ -31,7 +30,6 @@ class MonoblokController extends Controller
     public function create()
     {
         $boshqar = Boshqarma::with('monoblok')->get();
-
         return view('admin.layout.monoblok.create',compact('boshqar'));
     }
 

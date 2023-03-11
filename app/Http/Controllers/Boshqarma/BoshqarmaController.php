@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Boshqarma;
 
 use App\Http\Controllers\Controller;
 use App\Models\Boshqarma;
+use App\Models\Compyuter;
 use Illuminate\Http\Request;
 
 class BoshqarmaController extends Controller
@@ -54,7 +55,10 @@ class BoshqarmaController extends Controller
      */
     public function show(Boshqarma $boshqarma)
     {
-        return view('admin.layout.boshqarma.show', compact('boshqarma'));
+        $b = 1;
+        $comp = Compyuter::where('id', 'boshqarma_id')->get();
+//        dd($comp->all());
+        return view('admin.layout.boshqarma.show', compact('comp', 'b'));
     }
 
     /**
