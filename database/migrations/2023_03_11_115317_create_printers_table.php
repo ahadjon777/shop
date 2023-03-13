@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('olindi')->nullable();
             $table->date('topshirdi')->nullable();
             $table->foreignId('boshqarma_id')->nullable()->constrained('printers');
+            $table->foreign('boshqarma_id')->references('id')->on('boshqarmas');
             $table->timestamps();
         });
     }

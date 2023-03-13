@@ -2,7 +2,8 @@
 @section('content')
 
     <div class="container mt-5 ">
-
+        <h2>{{$bosh_nomi}}
+        <h3 style="text-align: center">Kompyuterlar ro'yxati</h3>
         <table class="table table-striped table-bordered table-hover mt-3">
             <thead>
             <tr>
@@ -22,26 +23,82 @@
             </tr>
             </thead>
             <tbody>
-
-{{--            @foreach($boshqarma as $bosh)--}}
-{{--                <tr>--}}
-{{--                    <td>{{$b++}}</td>--}}
-{{--                    <td>{{$bosh->model}}</td>--}}
-{{--                    <td>{{$bosh->seria_name}}</td>--}}
-{{--                    <td>{{$bosh->qmd_model}}</td>--}}
-{{--                    <td>{{$bosh->qmd_seria}}</td>--}}
-{{--                    <td>{{$bosh->ssd_number}}</td>--}}
-{{--                    <td>{{$bosh->ssd_model}}</td>--}}
-{{--                    <td>{{$bosh->monitor_number}}</td>--}}
-{{--                    <td>{{$bosh->monitor_model}}</td>--}}
-{{--                    <td>{{$bosh->ishlangan_sana}}</td>--}}
-{{--                    <td>{{$bosh->hisob_sana}}</td>--}}
-{{--                    <td>{{$bosh->olindi}}</td>--}}
-{{--                    <td>{{$bosh->topshirdi}}</td>--}}
-{{--                </tr>--}}
-{{--            @endforeach--}}
+            @foreach($comp as $com)
+                <tr>
+                    <td>{{$b++}}</td>
+                    {{--<td>{{$com->boshqarma_id}}</td>--}}
+                    <td>{{$com->model}}</td>
+                    <td>{{$com->seria_name}}</td>
+                    <td>{{$com->qmd_model}}</td>
+                    <td>{{$com->qmd_seria}}</td>
+                    <td>{{$com->ssd_number}}</td>
+                    <td>{{$com->ssd_model}}</td>
+                    <td>{{$com->monitor_number}}</td>
+                    <td>{{$com->monitor_model}}</td>
+                    <td>{{$com->ishlangan_sana}}</td>
+                    <td>{{$com->hisob_sana}}</td>
+                    <td>{{$com->olindi}}</td>
+                    <td>{{$com->topshirdi}}</td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
+            <h3 style="text-align: center; margin-top:50px">Monobloklar ro'yxati</h3>
+            <table class="table table-striped table-bordered table-hover mt-3">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Seria nomeri</th>
+                    <th scope="col">Ozu hajmi</th>
+                    <th scope="col">Ishlab chiqarilgan sana</th>
+                    <th scope="col">Hisob olingan sana</th>
+                    <th scope="col">Olindi</th>
+                    <th scope="col">Topshirildi</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($mono as $mon)
+                    <tr>
+                        <td>{{$b++}}</td>
+                        <td>{{$mon->model}}</td>
+                        <td>{{$mon->seria_name}}</td>
+                        <td>{{$mon->ozu_hajmi}}</td>
+                        <td>{{$mon->ishlangan_sana}}</td>
+                        <td>{{$mon->hisob_sana}}</td>
+                        <td>{{$mon->olindi}}</td>
+                        <td>{{$mon->topshirdi}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+            <h3 style="text-align: center; margin-top:50px">Printerlar ro'yxati</h3>
+            <table class="table table-striped table-bordered table-hover mt-3">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Seria nomeri</th>
+                    <th scope="col">Ishlab chiqarilgan sana</th>
+                    <th scope="col">Hisob olingan sana</th>
+                    <th scope="col">Olindi</th>
+                    <th scope="col">Topshirildi</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{--@foreach($printer as $print)
+                    <tr>
+                        <td>{{$p++}}</td>
+                        <td>{{$print->model}}</td>
+                        <td>{{$print->seria_name}}</td>
+                        <td>{{$print->ishlangan_sana}}</td>
+                        <td>{{$print->hisob_sana}}</td>
+                        <td>{{$print->olindi}}</td>
+                        <td>{{$print->topshirdi}}</td>
+                    </tr>
+                @endforeach--}}
+                </tbody>
+            </table>
         <a href="{{route('admin.boshqarma.index')}}" class="btn rounded-pill btn-dark">ortga qaytish</a>
 
     </div>

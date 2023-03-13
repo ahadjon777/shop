@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Boshqarma;
 use App\Http\Controllers\Controller;
 use App\Models\Boshqarma;
 use App\Models\Compyuter;
+use App\Models\Monoblok;
+use App\Models\Printer;
 use Illuminate\Http\Request;
 
 class BoshqarmaController extends Controller
@@ -55,12 +57,17 @@ class BoshqarmaController extends Controller
      */
     public function show(Boshqarma $boshqarma)
     {
-        $comp = Compyuter::all();
-//        dd($comp);/
+
+        //$comp = Compyuter::all();
+        $bosh = $boshqarma->id;
+        $bosh_nomi =$boshqarma->name;
+        //dd($boshqarma->id);
         $b = 1;
-        $comp = Compyuter::where('id', 'boshqarma_id')->get();
-//        dd($comp->all());
-        return view('admin.layout.boshqarma.show', compact('comp', 'b'));
+        $comp = Compyuter::where('boshqarma_id', $bosh)->get();
+        $mono = Monoblok::where('boshqarma_id',$bosh)->get();
+        $printer = Printer::where('boshqarma_id',$bosh)->get();
+       // dd($comp);
+        return view('admin.layout.boshqarma.show', compact('comp','mono','printer', 'b','bosh_nomi'));
     }
 
 //    public function getComputer(Request $request)

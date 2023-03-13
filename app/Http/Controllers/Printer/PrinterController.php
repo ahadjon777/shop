@@ -49,7 +49,7 @@ class PrinterController extends Controller
             'topshirdi'=>$request->topshirdi,
             'boshqarma_id'=>$request->boshqarma_id
         ]);
-        return redirect('admin.printer.index');
+        return redirect(route('admin.printer.index'));
     }
 
     /**
