@@ -18,8 +18,8 @@ class MonoblokController extends Controller
     {
         $mono= Monoblok::all();
 //        dd($mono->all());
-        $monobloklar = 1;
-        return view('admin.layout.monoblok.index', compact('mono', 'monobloklar'));
+        $m = 1;
+        return view('admin.layout.monoblok.index', compact('mono', 'm'));
     }
 
     /**
@@ -44,14 +44,14 @@ class MonoblokController extends Controller
         Monoblok::create([
             'model'=>$request->model,
             'seria_name'=>$request->seria_name,
-            'ozu_hajmi'=>$request->ozu_hajmi,
             'ishlangan_sana'=>$request->ishlangan_sana,
             'hisob_sana'=>$request->hisob_sana,
             'olindi'=>$request->olindi,
             'topshirdi'=>$request->topshirdi,
+            'ozu_hajmi'=>$request->ozu_hajmi,
             'boshqarma_id'=>$request->boshqarma_id
         ]);
-//        dd()
+
         return redirect(route('admin.monoblok.index'));
     }
 

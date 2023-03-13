@@ -1,3 +1,27 @@
+
+<style>
+   .menu-item{
+
+      border-radius: 5px;
+       text-align: center;
+       font-size: 16px;
+       margin: 4px 2px;
+       transition: 0.3s;
+   }
+   .menu-item:hover {
+       background-color: blue;
+       color: white;
+   }
+   .navbar_menu-style:hover{
+       color: white;
+       height: 100%;
+   }
+   .menu-inner{
+       padding: 10px;
+   }
+
+</style>
+
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="{{route('admin.dashboard')}}" class="app-brand-link">
@@ -19,7 +43,13 @@
         <li class="menu-item active">
             <a href="{{route('admin.all.table')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <div data-i18n="Analytics" class="navbar_menu-style">Dashboard</div>
+            </a>
+        </li>
+        <li class="menu-item " >
+            <a href="{{route('admin.technology.index')}}" class="menu-link " >
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div data-i18n="technology" class="navbar_menu-style">Axborot vositalari</div>
             </a>
         </li>
 
@@ -136,7 +166,7 @@
 {{--            </a>--}}
 {{--        </li>--}}
 {{--        <!-- User interface -->--}}
-        <li class="menu-item">
+       {{-- <li class="menu-item">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="User interface">Barcha jadvallar</div>
@@ -238,7 +268,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li>--}}
 
 {{--        <!-- Extended components -->--}}
 {{--        <li class="menu-item">--}}
@@ -311,10 +341,10 @@
         <li class="menu-item">
             <a href="{{route('admin.boshqarma.index')}}" class="menu-link">
                 <i class='menu-icon bx bx-group'></i>
-                <div> Boshqarmalar </div>
+                <div class="navbar_menu-style"> Boshqarmalar </div>
             </a>
         </li>
-        <li class="menu-item">
+       {{-- <li class="menu-item">
             <a href="#" class="menu-link">
                 <i class=' menu-icon bx bx-user-plus' ></i>
                 <div>Add User</div>
@@ -325,25 +355,25 @@
                 <i class='menu-icon bx bx-shield-quarter'></i>
                 <div> Role</div>
             </a>
-        </li>
+        </li>--}}
         <!-- Tables -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Settings</span></li>
         <li class="menu-item">
             <a href="{{route('admin.profile')}}" class="menu-link">
                 <i class='menu-icon bx bx-user-circle' ></i>
-                <div> Profile</div>
+                <div class="navbar_menu-style"> Profile</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="{{route('admin.setting')}}" class="menu-link">
                 <i class=' menu-icon bx bx-cog'></i>
-                <div>Setting</div>
+                <div class="navbar_menu-style">Setting</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="#" class="menu-link">
                 <i class=' menu-icon bx bx-planet'></i>
-                <div> Language</div>
+                <div class="navbar_menu-style"> Language</div>
             </a>
         </li>
     </ul>

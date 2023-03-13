@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Boshqarma;
 use App\Http\Controllers\Controller;
 use App\Models\Boshqarma;
 use App\Models\Compyuter;
+use App\Models\Monoblok;
+use App\Models\Technology;
 use Illuminate\Http\Request;
+use Vtiful\Kernel\Excel;
+use function Pest\Laravel\get;
 
 class BoshqarmaController extends Controller
 {
@@ -55,12 +59,16 @@ class BoshqarmaController extends Controller
      */
     public function show(Boshqarma $boshqarma)
     {
-        $comp = Compyuter::all();
-//        dd($comp);/
+        $bosh = $boshqarma->id;
+        $bosh_nomi =$boshqarma->name;
+        //dd($boshqarma->id);
         $b = 1;
-        $comp = Compyuter::where('id', 'boshqarma_id')->get();
-//        dd($comp->all());
-        return view('admin.layout.boshqarma.show', compact('comp', 'b'));
+       /* $comp = Compyuter::where('boshqarma_id', $bosh)->get();
+        $mono = Monoblok::where('boshqarma_id',$bosh)->get();
+        $printer = Printer::where('boshqarma_id',$bosh)->get();*/
+        $technology = Technology::where('boshqarma_id',$bosh)->get();
+        //dd($technology);
+        return view('admin.layout.boshqarma.show', compact('technology', 'b','bosh_nomi'));
     }
 
 //    public function getComputer(Request $request)
@@ -106,4 +114,10 @@ class BoshqarmaController extends Controller
         $boshqarma->delete();
         return redirect(route('admin.boshqarma.index'));
     }
+//    public function export(){
+//        return Excel::download(new BoshqarmaExport(),boshqarma.xlsx);
+//    }
+//    public function export_view(){
+//        return Excel::download(new BoshqarmaExportView(),boshqarma.xlsx);
+//    }
 }

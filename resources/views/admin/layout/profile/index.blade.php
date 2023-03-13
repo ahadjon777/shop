@@ -154,9 +154,9 @@
                                 <label for="language" class="form-label">Language</label>
                                 <select id="language" class="select2 form-select" name="language">
                                     <option value="">Select Language</option>
+                                    <option value="uz">Uzbek</option>
                                     <option value="en">English</option>
                                     <option value="fr">French</option>
-                                    <option value="de">German</option>
                                     <option value="pt">Portuguese</option>
                                 </select>
                             </div>
