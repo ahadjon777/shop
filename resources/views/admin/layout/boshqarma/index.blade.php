@@ -2,7 +2,19 @@
 @section('content')
 
     <div class="container ">
-        <a href="{{route('admin.boshqarma.create')}}" class="btn rounded-pill btn-success mt-5">boshqarmani kiritish</a>
+        <h2 style="text-align:center; margin-top: 25px;">Boshqarmalar ro'yxati</h2>
+        <a href="{{route('admin.boshqarma.create')}}" class="btn rounded-pill btn-success mt-2">boshqarmani kiritish</a>
+        {{--search qismi--}}
+        {{--<form class="form-inline ml-3">
+            <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>--}}
         <table class="table  shadow mt-3 text-center table-bordered table-striped table-hover">
             <thead>
             <tr>

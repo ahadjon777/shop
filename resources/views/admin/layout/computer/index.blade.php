@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container mt-5">
-        <a href="{{route('admin.computer.create')}}" class="btn rounded-pill btn-success">create</a>
+        <a href="{{route('admin.computer.create')}}" class="btn rounded-pill btn-success">Qo'shish</a>
         <table class="table table-striped table-bordered table-hover mt-3">
             <thead>
             <tr>

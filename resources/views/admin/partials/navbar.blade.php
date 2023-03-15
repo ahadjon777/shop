@@ -50,7 +50,7 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                        <img src="{{asset('admin/assets/img/avatars/1.jpg')}}" alt class="w-px-40 h-auto rounded-circle" />
+                                        <img src="{{asset('admin/assets/img/avatars/11.png')}}" alt class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">

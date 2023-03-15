@@ -17,4 +17,11 @@ class Boshqarma extends Model
     public function monoblok() {
         return $this->belongsTo(Compyuter::class,'boshqarma_id');
     }
+    public function printer(){
+        return $this->belongsTo(Printer::class,'boshqarma_id');
+    }
+
+    public function technology(){
+        return $this->belongsTo(Technology::class,'boshqarma_id');
+    }
 }
