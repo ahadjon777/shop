@@ -18,12 +18,12 @@ class ProfileSeeder extends Seeder
     public function run()
     {
         DB::table('profiles')->insert([
-            'first_name'=>   'Ahadjon',
-            'ph_number'=>    1797987,
+            'first_name'=>   'AKT va AHI Kursantlari',
+            'ph_number'=>    6025,
             'state'=>       'Uzbekistan',
             'country'=>     'ASIA',
             'time_zone'=>    'Tashkent',
-            'last_name'=>    'Abdurahmonov',
+            'last_name'=>    'Kursant',
             'organization'=> 'Lorem ip som',
             'address'=>      'Yunusabad 10-mavze',
             'zip_code'=>     '777777',

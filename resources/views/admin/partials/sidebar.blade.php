@@ -24,7 +24,7 @@
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="{{route('admin.dashboard')}}" class="app-brand-link">
+        <a href="{{route('admin.all.table')}}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <img src="{{asset('admin/assets/img/logo/1.png')}}" style="max-width: 50px">
               </span>
@@ -357,15 +357,15 @@
             </a>
         </li>--}}
         <!-- Tables -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Settings</span></li>
+{{--        <li class="menu-header small text-uppercase"><span class="menu-header-text">Settings</span></li>--}}
         <li class="menu-item">
-            <a href="{{route('admin.profile')}}" class="menu-link">
+            <a href="#" class="menu-link"> {{--{{route('admin.profile')}}--}}
                 <i class='menu-icon bx bx-user-circle' ></i>
                 <div class="navbar_menu-style"> Profile</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="{{route('admin.setting')}}" class="menu-link">
+            <a href="#" class="menu-link"> {{--{{route('admin.setting')}}--}}
                 <i class=' menu-icon bx bx-cog'></i>
                 <div class="navbar_menu-style">Setting</div>
             </a>

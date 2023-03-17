@@ -46,6 +46,7 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>['auth', 'role:ad
     Route::resource('table/monoblok',\App\Http\Controllers\Monoblok\MonoblokController::class);
     Route::resource('/boshqarma', \App\Http\Controllers\Boshqarma\BoshqarmaController::class);
     Route::resource('/technology',App\Http\Controllers\Technology\TechnologyController::class);
+
 });
 
 

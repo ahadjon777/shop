@@ -4,11 +4,10 @@
     <div class="container mt-5 ">
         <h2>{{$bosh_nomi}}
         <h3 style="text-align: center">Axborot vositalari ro'yxati</h3>
-            <table class="table table-striped table-bordered table-hover mt-3">
+            <table class="table table-striped table-bordered table-hover mt-3" id="tblexportData">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
-
                     <th scope="col">Qurilma nomi</th>
                     <th scope="col">Formulyar raqami</th>
                     <th scope="col">Modeli</th>
@@ -54,7 +53,41 @@
                 </tbody>
             </table>
 
-        <a href="{{route('admin.boshqarma.index')}}" class="btn rounded-pill btn-dark">ortga qaytish</a>
+            <a href="{{route('admin.boshqarma.index')}}" class="btn  btn-dark">ortga qaytish</a>
+            <button type="button" class="btn btn-dark" onclick="exportToExcel('tblexportData', 'user-data')" style="float: right">Excelga ko'chirish
+                <script type="text/javascript">
+                    function exportToExcel(tableID, filename = ''){
+                        var downloadurl;
+                        var dataFileType = 'application/vnd.ms-excel';
+                        var tableSelect = document.getElementById(tableID);
+                        var tableHTMLData = tableSelect.outerHTML.replace(/ /g, '%20');
+
+                        // Specify file name
+                        filename = filename?filename+'.xls':'export_excel_data.xls';
+
+                        // Create download link element
+                        downloadurl = document.createElement("a");
+
+                        document.body.appendChild(downloadurl);
+
+                        if(navigator.msSaveOrOpenBlob){
+                            var blob = new Blob(['\ufeff', tableHTMLData], {
+                                type: dataFileType
+                            });
+                            navigator.msSaveOrOpenBlob( blob, filename);
+                        }else{
+                            // Create a link to the file
+                            downloadurl.href = 'data:' + dataFileType + ', ' + tableHTMLData;
+
+                            // Setting the file name
+                            downloadurl.download = filename;
+
+                            //triggering the function
+                            downloadurl.click();
+                        }
+                    }
+
+                </script>
 
     </div>
 

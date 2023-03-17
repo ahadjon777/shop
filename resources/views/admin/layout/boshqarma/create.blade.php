@@ -7,7 +7,7 @@
             @method('post')
             <div class="card mb-4">
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">Bashqarmani kiritish</h5>
+                    <h5 class="mb-0">Boshqarmani kiritish</h5>
                     <small class="text-muted float-end">ABM</small>
                 </div>
                 <div class="card-body">
